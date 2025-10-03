@@ -51,7 +51,7 @@ module "katapult_vm" {
 ```
 # Inputs
 
-| Name -          | Description                                                  | Type          | Default | Required |
+| Name            | Description                                                  | Type          | Default | Required |
 |-----------------|--------------------------------------------------------------|---------------|---------|----------|
 | `name`          | Name of VM being created                                     | `string`      |         | **Yes**  |
 | `package`       | Type of VM to create                                         | `string`      |         | **Yes**  |
@@ -84,7 +84,7 @@ Accepted values for disk_template:
 
 # Inputs
 
-| Name -          | Description                                                  | Type          | Default | Required |
+| Name            | Description                                                  | Type          | Default | Required |
 |-----------------|--------------------------------------------------------------|---------------|---------|----------|
 | `enable_web`    | Enable Web traffic (all ipv4/ipv6 http/https)                | `bool`        | `false` | No       |
 | `enable_krystal` | Enable SSH access from Krystal hosts                        | `bool`        | `true`  | No       |
@@ -96,7 +96,7 @@ Common rules can be created automatically using the various `enable_*` variables
 
 # Rules
 When creating rules, use the following variables:
-| Name -           | Description                                                         | Type           | Default                | Required |
+| Name             | Description                                                         | Type           | Default                | Required |
 |------------------|---------------------------------------------------------------------|----------------|------------------------|----------|
 | `notes`          | Description for rule being created                                  | `string`       |                        | **Yes**  |
 | `ports`          | Specifies port(s)                                                   | `string`       | `"0"` (All ports)      | No       |
