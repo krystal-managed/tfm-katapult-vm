@@ -61,6 +61,24 @@ module "katapult_vm" {
 | `disks`         | List of disks to be created, first disk will be assigned as the system disk (must include name and size as shown above), if not specified will use disk_template default | `list`  |      | No       |
 | `create_sg`     | Specifies whether or not to create a security group and assign to VM | `bool`        | `true` | No       |
 
+Accepted values for disk_template:
+`AlmaLinux 8`
+`AlmaLinux 9`
+`CentOS 7.7`
+`CentOS 7.9`
+`CentOS 8.4`
+`Debian 10.2`
+`Debian 11`
+`Debian 12`
+`Debian 9.11`
+`Fedora 32`
+`OpenBSD 7.6`
+`OpenBSD 7.7`
+`SmartOS 20240208T000334Z`
+`Ubuntu 18.04`
+`Ubuntu 20.04`
+`Ubuntu 22.04`
+`Ubuntu 24.04`
 
 # Security Group Variables
 
