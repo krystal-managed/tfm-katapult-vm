@@ -4,6 +4,7 @@ resource "katapult_ip" "vm" {
 
 resource "katapult_virtual_machine" "vm" {
   name          = var.name
+  hostname      = var.name
   group_id      = var.group_id != "" ? var.group_id : null
   package       = var.package
   disk_template = local.disk_templates[var.disk_template]
@@ -19,4 +20,5 @@ resource "katapult_virtual_machine" "vm" {
       size = disk.value.size
     }
   }
+
 }
