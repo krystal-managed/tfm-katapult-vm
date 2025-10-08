@@ -1,7 +1,7 @@
 module "sg" {
   count = var.create_sg ? 1 : 0
 
-  source = "https://github.com/krystal-managed/tfm-katapult-security-group.git"
+  source = "github.com/krystal-managed/tfm-katapult-security-group"
 
   name   = var.name
   vm_ids = [katapult_virtual_machine.vm.id]
@@ -12,4 +12,5 @@ module "sg" {
 
   rules_in  = var.rules_in
   rules_out = var.rules_out
+
 }
