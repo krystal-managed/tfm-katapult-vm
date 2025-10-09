@@ -1,5 +1,5 @@
 resource "katapult_ip" "vm" {
-  for_each = [for i in range(var.public_ips): format("public_%02d", i + 1)]
+  for_each = toset([for i in range(var.public_ips): format("public_%02d", i + 1)])
 }
 
 resource "katapult_virtual_machine" "vm" {
