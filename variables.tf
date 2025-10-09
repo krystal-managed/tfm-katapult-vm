@@ -2,9 +2,16 @@ variable "name" {
   type = string
 }
 
+variable "hostname" {
+  type = string
+  nullable = true
+  default = null
+}
+
 variable "group_id" {
   type    = string
-  default = ""
+  nullable = true
+  default = null
 }
 
 variable "package" {
@@ -16,39 +23,11 @@ variable "disk_template" {
 }
 
 variable "public_ips" {
-  type    = number #
+  type    = number
   default = 1
 }
 
 variable "disks" {
+  type = list(string)
   default = []
-}
-
-# SG vars
-variable "create_sg" {
-  type    = bool
-  default = true
-}
-
-variable "rules_in" {
-  default = []
-}
-
-variable "rules_out" {
-  default = []
-}
-
-variable "enable_krystal" {
-  type    = bool
-  default = true
-}
-
-variable "enable_zabbix" {
-  type    = bool
-  default = true
-}
-
-variable "enable_web" {
-  type    = bool
-  default = false
 }
