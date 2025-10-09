@@ -1,4 +1,4 @@
-resource "katapult_ip" "vm" {
+resource "katapult_ip" "ip" {
   count = var.public_ips
 }
 
@@ -11,7 +11,7 @@ resource "katapult_virtual_machine" "vm" {
   disk_template_options = {
     install_agent = true
   }
-  ip_address_ids = katapult_ip.vm[*].id
+  ip_address_ids = katapult_ip.ip[*].id
 
   dynamic "disk" {
     for_each = length(var.disks) > 0 ? var.disks : []
@@ -22,3 +22,4 @@ resource "katapult_virtual_machine" "vm" {
   }
 
 }
+
