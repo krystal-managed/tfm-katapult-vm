@@ -4,3 +4,6 @@ output "vm_id" {
 output "sg_id" {
   value = module.sg.sg_id
 }
+output "vm_ips" {
+  value = katapult_ip.ip[*].address
+}
