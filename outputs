@@ -1,3 +1,6 @@
 output "vm_id" {
   value = katapult_virtual_machine.vm.id
 }
+output "sg_id" {
+  value = module.sg.sg_id
+}
