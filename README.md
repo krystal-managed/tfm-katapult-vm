@@ -5,7 +5,7 @@ Module for deploying Katapult VM with/without security group
 
 ```hcl
 module "katapult_vm" {
-  source = "git@github.com:krystal-managed/tfm-katapult-vm.git"
+  source = "github.com/krystal-managed/tfm-katapult-vm"
 
   name = "db1-2"
   group_id = "Database servers"
