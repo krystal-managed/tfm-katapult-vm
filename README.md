@@ -33,7 +33,6 @@ module "katapult_vm" {
 | `package`       | Type of VM to create                                         | `string`      |         | **Yes**  |
 | `disk_template` | OS of VM being created (see below for accepted values)       | `string`      |         | **Yes**  |
 | `hostname`      | Name of VM being created                                     | `string`      |         | **No**   |
-| `hostname`      | Optional VM Group that will be created                       | `string`      |         | **No**   |
 | `group_id`      | VM group to add server to                                    | `string`      |         | **No**   |
 | `public_ips`    | Number of public IPs to assign to VM                         | `number`      | `1`     | **No**   |
 | `disks`         | List of disks to be created, first disk will be assigned as the system disk (must include name and size as shown above), if not specified will use disk_template default | `list`  |      | **No**       |
@@ -46,7 +45,7 @@ These are the current accepted values for disk_template based on Katapult Distri
 - `Ubuntu 22.04`
 - `Ubuntu 24.04`
 
-For specific accounts such as Krystal Enterprise there are also specific ISO's that can ber used as well
+For specific accounts such as Krystal Enterprise there are also specific ISO's that can be used as well such as the following:
 
 - `OpenBSD 7.6`
 - `OpenBSD 7.7`

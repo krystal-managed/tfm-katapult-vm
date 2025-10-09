@@ -8,12 +8,6 @@ variable "hostname" {
   default = null
 }
 
-variable "vm_group" {
-  type = string
-  nullable = true
-  default = null
-}
-
 variable "group_id" {
   type    = string
   nullable = true
@@ -34,5 +28,6 @@ variable "public_ips" {
 }
 
 variable "disks" {
+  type = list(string)
   default = []
 }
