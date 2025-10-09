@@ -1,5 +1,5 @@
 # Katapult VM Module
-Module for deploying Katapult VM with/without VM Group
+Module for deploying Katapult VM
 
 ## Usage
 
