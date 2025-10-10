@@ -4,7 +4,7 @@ resource "katapult_ip" "vm" {
 
 resource "katapult_virtual_machine" "vm" {
   name          = var.name
-  hostname      = var.hostname
+  hostname      = try(var.hostname, var.name)
   group_id      = var.group_id
   package       = var.package
   disk_template = local.disk_templates[var.disk_template]
