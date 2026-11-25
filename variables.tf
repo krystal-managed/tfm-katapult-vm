@@ -30,6 +30,10 @@ variable "create_sg" {
   default = true
 }
 
+variable "use_existing_sg" {
+  default = ""
+}
+
 variable "rules_in" {
   default = []
 }
